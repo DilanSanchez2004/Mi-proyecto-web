@@ -1,19 +1,25 @@
 /* =========================================================
    style.css - Estilo GLOBAL del sitio (Proyecto Integrador I)
-   Sobrescribe los colores por defecto de Materialize.
+   Se aplica solo a todas las páginas que lo enlacen.
+   Sobrescribe los colores por defecto de Materialize (teal),
+   así que los compañeros pueden usar componentes normales
+   de Materialize y ya salen con nuestra paleta.
+   Paleta: rojo, blanco verdoso, celeste, azul acero, azul marino
+   Fuente: Poppins (se carga aquí mismo, no hace falta otro <link>)
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* ---------- 1. Variables de color ---------- */
 :root {
   --rojo: #E63946;
-  --negro: #000000;
   --blanco: #F1FAEE;
   --celeste: #A8DADC;
   --azul: #457B9D;
   --marino: #1D3557;
 }
 
+/* ---------- 2. Base ---------- */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--blanco);
@@ -41,14 +47,7 @@ a {
   color: var(--azul);
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
+/* ---------- 3. Navbar ---------- */
 nav {
   background-color: var(--marino);
 }
@@ -68,6 +67,7 @@ nav ul a:hover {
   background-color: var(--azul);
 }
 
+/* Enlace de la página actual */
 nav ul li.active {
   background-color: var(--rojo);
 }
@@ -76,6 +76,7 @@ nav ul li.active {
   color: var(--marino);
 }
 
+/* ---------- 4. Botones ---------- */
 .btn,
 .btn-large,
 .btn-small,
@@ -102,6 +103,7 @@ nav ul li.active {
   color: var(--azul);
 }
 
+/* ---------- 5. Cards ---------- */
 .card {
   border-radius: 12px;
   overflow: hidden;
@@ -112,7 +114,7 @@ nav ul li.active {
   color: var(--marino);
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-floating) {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
   color: var(--azul);
 }
 
@@ -124,6 +126,7 @@ nav ul li.active {
   border-left: 5px solid var(--rojo);
 }
 
+/* ---------- 6. Collapsibles ---------- */
 .collapsible {
   border: none;
   box-shadow: none;
@@ -148,6 +151,7 @@ nav ul li.active {
   border-left: 4px solid var(--azul);
 }
 
+/* ---------- 7. Formularios (Materialize usa teal por defecto) ---------- */
 .input-field input:focus,
 .input-field textarea:focus {
   border-bottom: 1px solid var(--azul) !important;
@@ -173,6 +177,7 @@ textarea.invalid {
   color: var(--rojo);
 }
 
+/* ---------- 8. Otros componentes de Materialize ---------- */
 .collection .collection-item.active {
   background-color: var(--azul);
 }
@@ -225,6 +230,8 @@ textarea.invalid {
   background-color: var(--azul);
 }
 
+/* ---------- 9. Clases propias reutilizables ---------- */
+/* Título de sección con línea roja debajo */
 .titulo-seccion {
   border-bottom: 4px solid var(--rojo);
   display: inline-block;
@@ -232,6 +239,7 @@ textarea.invalid {
   margin-bottom: 30px;
 }
 
+/* Bloque destacado en azul acero */
 .bloque-general {
   background-color: var(--azul);
   color: var(--blanco);
@@ -249,6 +257,7 @@ textarea.invalid {
   border-left-color: var(--celeste);
 }
 
+/* Colores de la paleta como utilidades (fondo y texto) */
 .bg-rojo { background-color: var(--rojo) !important; }
 .bg-blanco { background-color: var(--blanco) !important; }
 .bg-celeste { background-color: var(--celeste) !important; }
@@ -260,134 +269,11 @@ textarea.invalid {
 .txt-azul { color: var(--azul) !important; }
 .txt-marino { color: var(--marino) !important; }
 
+/* ---------- 10. Footer ---------- */
 footer.page-footer {
   background-color: var(--marino);
 }
 
 footer.page-footer .footer-copyright {
   background-color: var(--azul);
-}
-
-/* Estilos de la pagina Nosotros */
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.about-banner {
-  padding: 55px 0 45px;
-  background: linear-gradient(135deg, var(--azul), var(--marino));
-}
-
-.about-banner h1 {
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.section-title {
-  margin-bottom: 35px;
-  font-weight: 600;
-}
-
-.mission-card,
-.vision-card {
-  min-height: 0;
-  border-radius: 12px;
-}
-
-.mission-card .card-content,
-.vision-card .card-content {
-  padding: 28px 32px;
-}
-
-.purpose-card-content {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  align-items: center;
-  gap: 32px;
-}
-
-.purpose-heading {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.purpose-heading .card-title {
-  margin: 0;
-  font-weight: 600;
-}
-
-.purpose-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: var(--blanco);
-}
-
-.mission-icon {
-  background: var(--azul);
-}
-
-.vision-icon {
-  background: var(--marino);
-}
-
-.mission-card p,
-.vision-card p {
-  margin: 0;
-  line-height: 1.8;
-}
-
-.team-card {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.team-card .card-content {
-  min-height: 230px;
-}
-
-.team-name {
-  font-size: 1.15rem !important;
-  line-height: 1.35 !important;
-}
-
-.team-avatar {
-  width: 110px;
-  height: 110px;
-  margin: 28px auto 0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanco);
-  font-size: 2rem;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .18);
-}
-
-.team-role {
-  color: #777;
-  text-transform: uppercase;
-  font-size: .85rem;
-  letter-spacing: 1px;
-}
-
-@media only screen and (max-width: 992px) {
-  .purpose-card-content {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .about-banner {
-    padding: 40px 0;
-  }
 }
