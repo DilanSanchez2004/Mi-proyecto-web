@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOMBRE DE LA PÁGINA | Mi Proyecto Web</title>
+
+  <!-- Iconos de Google -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Estilos propios: SIEMPRE después de Materialize.
+       Aquí ya vienen los colores y la fuente Poppins. -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR (igual en todas las páginas) ================= -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Mi Proyecto</a>
+      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <!-- Ponle class="active" SOLO al <li> de la página en la que estás -->
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="menu-movil">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="objetivos.html">Objetivos</a></li>
+    <li><a href="avances.html">Avances</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+
+  <!-- ================= CONTENIDO (cada quien edita solo esto) ================= -->
+  <main>
+    <div class="container">
+
+      <h3 class="titulo-seccion">Título de la página</h3>
+
+      <!-- Escriban aquí su contenido con componentes de Materialize -->
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER (igual en todas las páginas) ================= -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8">
+          <h6 class="white-text">Proyecto Integrador I</h6>
+          <p class="grey-text text-lighten-4">Ingeniería de Sistemas - Universidad del Valle, Sede Tuluá</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">© 2026 Nombre del grupo</div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      // Aquí inicializan lo que necesiten (collapsibles, modales, etc.)
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetivos | Mi Proyecto Web</title>
+
+  <!-- Iconos de Google -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Estilos propios (siempre después de Materialize) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">Mi Proyecto</a>
+      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class="active"><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Menú para celular -->
+  <ul class="sidenav" id="menu-movil">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="objetivos.html">Objetivos</a></li>
+    <li><a href="avances.html">Avances</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+
+  <!-- ================= CONTENIDO ================= -->
+  <main>
+    <div class="container">
+
+      <h3 class="titulo-seccion">Objetivos</h3>
+
+      <!-- Objetivo general (card horizontal) -->
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content">
+            <span class="card-title">Objetivo general</span>
+            <p>
+              Desarrollar una aplicación web para la gestión y el agendamiento de citas de los
+              servicios de salud de la Universidad del Valle, sedes Tuluá y Cali, que facilite el
+              acceso de estudiantes y trabajadores a los servicios médicos, odontológicos y
+              psicológicos, y permita a los profesionales y administradores gestionar de manera
+              organizada las agendas y solicitudes de atención.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Objetivos específicos (collapsibles) -->
+      <h5 style="margin-top: 40px;">Objetivos específicos</h5>
+
+      <ul class="collapsible">
+        <li class="active">
+          <div class="collapsible-header"><i class="material-icons">lock</i>1. Registro y autenticación</div>
+          <div class="collapsible-body">
+            <span>Diseñar un sistema de registro y autenticación que permita diferenciar los tipos de usuarios: estudiantes, trabajadores, profesionales de salud y administradores.</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">medical_services</i>2. Consulta de servicios por sede</div>
+          <div class="collapsible-body">
+            <span>Implementar un módulo para consultar los servicios de salud disponibles (medicina general, odontología y psicología) en cada sede, Tuluá y Cali.</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">event_available</i>3. Agendamiento de citas</div>
+          <div class="collapsible-body">
+            <span>Desarrollar un sistema de agendamiento que permita seleccionar profesionales, fechas y horarios disponibles, evitando que dos personas reserven el mismo horario con el mismo profesional.</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">admin_panel_settings</i>4. Gestión para profesionales y administradores</div>
+          <div class="collapsible-body">
+            <span>Crear funcionalidades para que los profesionales gestionen sus agendas, e implementar herramientas administrativas para controlar usuarios, servicios, sedes y citas.</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">devices</i>5. Interfaz intuitiva y accesible</div>
+          <div class="collapsible-body">
+            <span>Diseñar una interfaz intuitiva, organizada y adaptable a dispositivos móviles, accesible para los diferentes tipos de usuarios.</span>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Botón con interacción JS: cambia el color del bloque -->
+      <div class="center-align" style="margin-top: 40px;">
+        <button class="btn waves-effect waves-light" id="btn-resaltar">
+          <i class="material-icons left">palette</i>Resaltar objetivo general
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8">
+          <h6 class="white-text">Proyecto Integrador I</h6>
+          <p class="grey-text text-lighten-4">Ingeniería de Sistemas - Universidad del Valle, Sede Tuluá</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">© 2026 Nombre del grupo</div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Activar menú de celular y collapsibles
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      M.Collapsible.init(document.querySelectorAll('.collapsible'));
+
+      // Interacción: al hacer clic se resalta la card del objetivo general
+      var boton = document.getElementById('btn-resaltar');
+      var card = document.querySelector('.card.horizontal');
+      var resaltado = false;
+
+      boton.addEventListener('click', function () {
+        resaltado = !resaltado;
+        card.classList.toggle('bloque-general', resaltado);
+        M.toast({ html: resaltado ? 'Objetivo general resaltado' : 'Resaltado quitado' });
+      });
+    });
+  </script>
+</body>
+</html>

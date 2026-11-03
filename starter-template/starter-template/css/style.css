@@ -1,14 +1,279 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+/* =========================================================
+   style.css - Estilo GLOBAL del sitio (Proyecto Integrador I)
+   Se aplica solo a todas las páginas que lo enlacen.
+   Sobrescribe los colores por defecto de Materialize (teal),
+   así que los compañeros pueden usar componentes normales
+   de Materialize y ya salen con nuestra paleta.
+   Paleta: rojo, blanco verdoso, celeste, azul acero, azul marino
+   Fuente: Poppins (se carga aquí mismo, no hace falta otro <link>)
+   ========================================================= */
 
-.icon-block {
-  padding: 0 15px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ---------- 1. Variables de color ---------- */
+:root {
+  --rojo: #E63946;
+  --blanco: #F1FAEE;
+  --celeste: #A8DADC;
+  --azul: #457B9D;
+  --marino: #1D3557;
 }
-.icon-block .material-icons {
-	font-size: inherit;
+
+/* ---------- 2. Base ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--blanco);
+  color: var(--marino);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 40px 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, span, label, button, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--marino);
+}
+
+a {
+  color: var(--azul);
+}
+
+/* ---------- 3. Navbar ---------- */
+nav {
+  background-color: var(--marino);
+}
+
+nav .brand-logo {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-left: 15px;
+}
+
+nav ul a {
+  font-weight: 400;
+  transition: background-color 0.3s;
+}
+
+nav ul a:hover {
+  background-color: var(--azul);
+}
+
+/* Enlace de la página actual */
+nav ul li.active {
+  background-color: var(--rojo);
+}
+
+.sidenav li > a {
+  color: var(--marino);
+}
+
+/* ---------- 4. Botones ---------- */
+.btn,
+.btn-large,
+.btn-small,
+.btn-floating {
+  background-color: var(--rojo);
+  font-family: 'Poppins', sans-serif;
+  text-transform: none;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+  border-radius: 25px;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover,
+.btn-floating:hover {
+  background-color: var(--marino);
+}
+
+.btn-flat {
+  color: var(--azul);
+}
+
+/* ---------- 5. Cards ---------- */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card .card-title {
+  font-weight: 600;
+  color: var(--marino);
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  color: var(--azul);
+}
+
+.card .card-action a:not(.btn):hover {
+  color: var(--rojo);
+}
+
+.card.horizontal .card-stacked {
+  border-left: 5px solid var(--rojo);
+}
+
+/* ---------- 6. Collapsibles ---------- */
+.collapsible {
+  border: none;
+  box-shadow: none;
+}
+
+.collapsible-header {
+  background-color: var(--celeste);
+  color: var(--marino);
+  font-weight: 600;
+  border-bottom: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.collapsible-header i {
+  color: var(--rojo);
+}
+
+.collapsible-body {
+  background-color: #ffffff;
+  border-bottom: none;
+  border-left: 4px solid var(--azul);
+}
+
+/* ---------- 7. Formularios (Materialize usa teal por defecto) ---------- */
+.input-field input:focus,
+.input-field textarea:focus {
+  border-bottom: 1px solid var(--azul) !important;
+  box-shadow: 0 1px 0 0 var(--azul) !important;
+}
+
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+  color: var(--azul) !important;
+}
+
+.input-field .prefix.active {
+  color: var(--azul);
+}
+
+input.invalid,
+textarea.invalid {
+  border-bottom: 1px solid var(--rojo) !important;
+  box-shadow: 0 1px 0 0 var(--rojo) !important;
+}
+
+.helper-text[data-error] {
+  color: var(--rojo);
+}
+
+/* ---------- 8. Otros componentes de Materialize ---------- */
+.collection .collection-item.active {
+  background-color: var(--azul);
+}
+
+.collection a.collection-item {
+  color: var(--azul);
+}
+
+.collection a.collection-item:hover:not(.active) {
+  background-color: var(--celeste);
+}
+
+.chip {
+  background-color: var(--celeste);
+  color: var(--marino);
+}
+
+.tabs .tab a {
+  color: var(--azul);
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  color: var(--rojo);
+}
+
+.tabs .indicator {
+  background-color: var(--rojo);
+}
+
+.modal .modal-footer .btn-flat {
+  color: var(--azul);
+}
+
+.progress {
+  background-color: var(--celeste);
+}
+
+.progress .determinate,
+.progress .indeterminate {
+  background-color: var(--rojo);
+}
+
+.badge.new {
+  background-color: var(--rojo);
+}
+
+[type="checkbox"].filled-in:checked + span:not(.lever)::after {
+  border-color: var(--azul);
+  background-color: var(--azul);
+}
+
+/* ---------- 9. Clases propias reutilizables ---------- */
+/* Título de sección con línea roja debajo */
+.titulo-seccion {
+  border-bottom: 4px solid var(--rojo);
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+}
+
+/* Bloque destacado en azul acero */
+.bloque-general {
+  background-color: var(--azul);
+  color: var(--blanco);
+  border-radius: 12px;
+  padding: 25px 30px;
+}
+
+.bloque-general h5,
+.bloque-general .card-title,
+.bloque-general p {
+  color: var(--blanco);
+}
+
+.bloque-general .card-stacked {
+  border-left-color: var(--celeste);
+}
+
+/* Colores de la paleta como utilidades (fondo y texto) */
+.bg-rojo { background-color: var(--rojo) !important; }
+.bg-blanco { background-color: var(--blanco) !important; }
+.bg-celeste { background-color: var(--celeste) !important; }
+.bg-azul { background-color: var(--azul) !important; }
+.bg-marino { background-color: var(--marino) !important; }
+
+.txt-rojo { color: var(--rojo) !important; }
+.txt-celeste { color: var(--celeste) !important; }
+.txt-azul { color: var(--azul) !important; }
+.txt-marino { color: var(--marino) !important; }
+
+/* ---------- 10. Footer ---------- */
+footer.page-footer {
+  background-color: var(--marino);
+}
+
+footer.page-footer .footer-copyright {
+  background-color: var(--azul);
 }
