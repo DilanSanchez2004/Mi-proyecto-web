@@ -19,6 +19,7 @@
   <!-- ================= NAVBAR ================= -->
   <nav>
     <div class="nav-wrapper container">
+
       <a href="index.html" class="brand-logo"><img src="images/logo-univalle-salud.png" alt="Univalle Salud"></a>
       <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -155,25 +156,111 @@
             </div>
           </div>
 
-          <div class="col s12 m6 l4">
-            <div class="card hoverable">
-              <div class="avance-imagen bg-azul">
-                <i class="material-icons">health_and_safety</i>
-              </div>
-              <div class="card-content">
-                <span class="card-title">Logotipo y slogan</span>
-                <p>Univalle Salud: bienestar que te acompaña.</p>
-                <p class="detalle hide">Identidad visual de la plataforma, representada por el logotipo de Univalle Salud y su slogan.</p>
-              </div>
-              <div class="card-action">
-                <button class="btn-flat btn-detalle">Ver más</button>
-                <a href="images/logo-univalle-salud.png" target="_blank" rel="noopener noreferrer">Ver logotipo</a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
+
+      <!-- =====================================================================
+     SECCIÓN: Colorimetría y tipografía
+     DÓNDE PEGAR: en avances.html, dentro de <main><div class="container">,
+     donde quieran que aparezca (por ejemplo, después de los otros avances).
+     NO pegar las etiquetas <html>, <head> ni <body>: solo lo de abajo.
+     Los estilos ya están en css/style.css (sección 10).
+     ===================================================================== -->
+
+<h4 class="titulo-seccion">Colorimetría y tipografía</h4>
+
+<!-- ---------- 1. Paleta de colores (equivalente a la imagen del taller) ---------- -->
+<h5>Paleta de colores</h5>
+<p>
+  Los colores transmiten confianza y calma, apropiados para un servicio de salud,
+  y el rojo aporta energía en las acciones principales. Cada color tiene un rol definido.
+</p>
+
+<div class="paleta">
+  <div class="paleta-marca">Marca</div>
+  <div class="paleta-fila">
+    <div class="paleta-item texto-fuerte">Texto<br>fuerte</div>
+    <div class="paleta-item texto-debil">Texto<br>débil</div>
+    <div class="paleta-item trazo-fuerte">Trazo<br>fuerte</div>
+    <div class="paleta-item trazo-debil">Trazo<br>débil</div>
+    <div class="paleta-item relleno">Relleno</div>
+  </div>
+</div>
+
+<!-- ---------- 2. Rol, uso y contraste de cada color ---------- -->
+<div style="overflow-x: auto;">
+  <table class="striped tabla-roles">
+    <thead>
+      <tr>
+        <th>Color</th>
+        <th>Rol</th>
+        <th>HEX / HSB</th>
+        <th>Uso en el sitio</th>
+        <th>Contraste (WCAG)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="muestra" style="background:#E63946"></span></td>
+        <td><strong>Marca</strong></td>
+        <td>#E63946<br>HSB: 355, 75, 90</td>
+        <td>Botones, enlace activo del menú y detalles de identidad. Cuando lleva texto encima se usa la variante #C62F3C.</td>
+        <td>#C62F3C con texto blanco: 5.42:1 (AA). #E63946 con texto grande: 4.17:1 (AA texto grande).</td>
+      </tr>
+      <tr>
+        <td><span class="muestra" style="background:#1D3557"></span></td>
+        <td><strong>Texto fuerte</strong></td>
+        <td>#1D3557<br>HSB: 215, 67, 34</td>
+        <td>Títulos, texto de cuerpo, navbar y footer.</td>
+        <td>11.56:1 sobre el relleno (AAA).</td>
+      </tr>
+      <tr>
+        <td><span class="muestra" style="background:#566881"></span></td>
+        <td><strong>Texto débil</strong></td>
+        <td>#566881<br>HSB: 215, 33, 51</td>
+        <td>Texto secundario, notas y descripciones menos destacadas.</td>
+        <td>5.32:1 sobre el relleno (AA).</td>
+      </tr>
+      <tr>
+        <td><span class="muestra" style="background:#457B9D"></span></td>
+        <td><strong>Trazo fuerte</strong></td>
+        <td>#457B9D<br>HSB: 203, 56, 62</td>
+        <td>Bordes de campos de formulario, íconos y elementos gráficos con significado.</td>
+        <td>4.30:1 sobre el relleno (mínimo 3:1 para elementos gráficos).</td>
+      </tr>
+      <tr>
+        <td><span class="muestra" style="background:#A8DADC"></span></td>
+        <td><strong>Trazo débil</strong></td>
+        <td>#A8DADC<br>HSB: 182, 24, 86</td>
+        <td>Separadores y bordes decorativos, encabezados de collapsibles.</td>
+        <td>Solo decorativo: no se usa para información esencial.</td>
+      </tr>
+      <tr>
+        <td><span class="muestra" style="background:#F1FAEE"></span></td>
+        <td><strong>Relleno</strong></td>
+        <td>#F1FAEE<br>HSB: 105, 5, 98</td>
+        <td>Fondo general de las páginas.</td>
+        <td>Fondo base para medir el contraste de los demás colores.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ---------- 3. Tipografía ---------- -->
+<h5 style="margin-top: 40px;">Tipografía</h5>
+<p>
+  Usamos <strong>Poppins</strong> para títulos y elementos destacados, y <strong>Lato</strong>
+  para el texto general por su legibilidad. Esta combinación define la jerarquía tipográfica del sitio.
+</p>
+
+<div class="escala-tipo">
+  <div class="escala-fila"><span class="escala-h1">Poppins · Heading 1</span><small>40 px</small></div>
+  <div class="escala-fila"><span class="escala-h2">Poppins · Heading 2</span><small>32 px</small></div>
+  <div class="escala-fila"><span class="escala-h3">Poppins · Heading 3</span><small>24 px</small></div>
+  <div class="escala-fila"><span class="escala-h4">Poppins · Heading 4</span><small>20 px</small></div>
+  <div class="escala-fila"><span class="escala-small">Lato · texto general</span><small>16 px</small></div>
+  <div class="escala-fila"><span class="escala-tiny">Lato · texto secundario</span><small>14 px</small></div>
+</div>
 
     </div>
   </main>
@@ -189,50 +276,9 @@
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">© 2026 Nombre del grupo</div>
+      <div class="container">© 2026 Bienevenidos</div>
     </div>
   </footer>
-
-  <!-- ================= MODAL PARA WIREFRAMES ================= -->
-  <div id="modal-wireframes" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Galería de Wireframes</h4>
-      <p>Bocetos y estructura de las pantallas principales de la plataforma.</p>
-      
-      <!-- Aquí colocas tus imágenes. 
-           Asegúrate de que las fotos estén en la carpeta: images/wireframes/ 
-           y que los nombres coincidan exactamente -->
-      <div class="row">
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaInicio.webp" alt="Wireframe pantallaInicio" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaConsulta.webp" alt="Wireframe pantallaConsulta" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaAdmi.webp" alt="Wireframe pantallaAdmi" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaAgenda.webp" alt="Wireframe pantallaAgenda" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaGestion.webp" alt="Wireframe pantallaGestion" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaCelu1.webp" alt="Wireframe pantallaCelu1" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaCeli2.webp" alt="Wireframe pantallaCelu2" class="responsive-img materialboxed">
-        </div>
-      </div>
-      <!-- Nota: La clase "materialboxed" hace que al hacer clic en la foto, esta se amplíe -->
-
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
-    </div>
-  </div>
-  <!-- ================= FIN DEL MODAL ================= -->
 
   <!-- Materialize JS (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
