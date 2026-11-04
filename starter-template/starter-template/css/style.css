@@ -277,3 +277,94 @@ footer.page-footer {
 footer.page-footer .footer-copyright {
   background-color: var(--azul);
 }
+
+/* ---------- 11. Página Nosotros ---------- */
+.about-banner {
+  background-color: var(--azul);
+  border-bottom: 6px solid var(--rojo);
+  padding: 70px 20px;
+}
+
+.about-banner h1,
+.about-banner h5 {
+  color: var(--blanco);
+}
+
+.section-title {
+  border-bottom: 3px solid var(--rojo);
+  display: inline-block;
+  left: 50%;
+  padding-bottom: 8px;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+.purpose-card-content {
+  min-height: 230px;
+}
+
+.purpose-heading {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.purpose-icon {
+  align-items: center;
+  border-radius: 50%;
+  color: var(--blanco);
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.mission-icon {
+  background-color: var(--rojo);
+}
+
+.vision-icon {
+  background-color: var(--azul);
+}
+
+.team-card {
+  height: 100%;
+  min-height: 330px;
+}
+
+.team-avatar {
+  align-items: center;
+  border-radius: 50%;
+  color: var(--blanco);
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 600;
+  height: 72px;
+  justify-content: center;
+  margin: 24px auto 0;
+  overflow: hidden;
+  position: relative;
+  width: 72px;
+}
+
+.team-avatar img {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.team-name {
+  display: block;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  min-height: 62px;
+}
+
+.team-role {
+  color: var(--rojo);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
