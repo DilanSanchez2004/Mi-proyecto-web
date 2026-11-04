@@ -1,12 +1,4 @@
-/* =========================================================
-   style.css - Estilo GLOBAL del sitio (Proyecto Integrador I)
-   Se aplica solo a todas las páginas que lo enlacen.
-   Sobrescribe los colores por defecto de Materialize (teal),
-   así que los compañeros pueden usar componentes normales
-   de Materialize y ya salen con nuestra paleta.
-   Paleta: rojo, blanco verdoso, celeste, azul acero, azul marino
-   Fuente: Poppins (se carga aquí mismo, no hace falta otro <link>)
-   ========================================================= */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -414,4 +406,103 @@ footer.page-footer .footer-copyright {
   height: 100%;
   object-fit: cover;
   width: 100%;
+}
+
+/* ---------- 13. Compatibilidad con clases de color de Materialize ---------- */
+.orange {
+  background-color: var(--rojo) !important;
+}
+
+.orange-text {
+  color: var(--rojo) !important;
+}
+
+.light-blue {
+  background-color: var(--azul) !important;
+}
+
+.light-blue-text {
+  color: var(--azul) !important;
+}
+
+/* ---------- 14. Navegación horizontal ---------- */
+nav .nav-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+nav .brand-logo {
+  position: static;
+  transform: none;
+}
+
+nav .nav-links {
+  display: flex;
+  flex: 1;
+  margin: 0 0 0 auto;
+  justify-content: flex-end;
+}
+
+nav .nav-links li {
+  float: none;
+}
+
+nav .nav-links li a {
+  padding: 0 15px;
+}
+
+@media only screen and (max-width: 700px) {
+  nav .brand-logo {
+    font-size: 1.15rem;
+    margin-left: 8px;
+  }
+
+  nav .nav-links li a {
+    font-size: 0.8rem;
+    padding: 0 6px;
+  }
+}
+
+/* ---------- 14. Página Objetivos ---------- */
+.objetivos-page {
+  max-width: 950px;
+}
+
+.objetivos-page .titulo-seccion {
+  margin-bottom: 36px;
+}
+
+.objetivo-general {
+  background-color: #ffffff;
+  border-left: 5px solid var(--rojo);
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 2px 6px rgba(29, 53, 87, 0.25);
+  margin-bottom: 36px;
+  padding: 24px 25px;
+}
+
+.objetivo-general h2,
+.objetivos-especificos h2 {
+  font-size: 1.6rem;
+  margin: 0 0 10px;
+}
+
+.objetivo-general p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.objetivos-especificos .collapsible {
+  margin-top: 8px;
+}
+
+.objetivos-especificos .collapsible-header {
+  align-items: center;
+  display: flex;
+  min-height: 54px;
+}
+
+.objetivos-especificos .collapsible-body {
+  line-height: 1.5;
+  padding: 28px 30px;
 }
