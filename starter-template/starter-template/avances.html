@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avances | Mi Proyecto Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce el desarrollo y los avances de Univalle Salud.">
+    <title>Avances | Univalle Salud</title>
 
-  <!-- Iconos de Google -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- Materialize CSS (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <!-- Estilos propios (siempre después de Materialize) -->
-  <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- ================= NAVBAR ================= -->
   <nav>
     <div class="nav-wrapper container">
-      <a href="index.html" class="brand-logo">Mi Proyecto</a>
-      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+
+      <a href="index.html" class="brand-logo"><img src="images/logo-univalle-salud.png" alt="Univalle Salud"></a>
+      <span class="nav-slogan">Univalle Salud: bienestar que te acompaña.</span>
+      <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="objetivos.html">Objetivos</a></li>
@@ -30,15 +27,6 @@
       </ul>
     </div>
   </nav>
-
-  <!-- Menú para celular -->
-  <ul class="sidenav" id="menu-movil">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="objetivos.html">Objetivos</a></li>
-    <li class="active"><a href="avances.html">Avances</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
 
   <!-- ================= CONTENIDO ================= -->
   <main>
@@ -66,76 +54,32 @@
           <a href="#!" class="chip filtro" data-filtro="proceso">En proceso</a>
           <a href="#!" class="chip filtro" data-filtro="pendiente">Pendientes</a>
         </div>
+    </nav>
 
-        <ul class="collection">
-          <li class="collection-item avatar" data-estado="completado">
-            <i class="material-icons circle bg-azul">check</i>
-            <span class="title">Requisitos e historias de usuario</span>
-            <p>Levantamiento de requisitos y redacción de las historias de usuario.</p>
-            <span class="secondary-content estado completado">Completado</span>
-          </li>
-          <li class="collection-item avatar" data-estado="completado">
-            <i class="material-icons circle bg-azul">check</i>
-            <span class="title">Wireframes y prototipo en Figma</span>
-            <p>Diseño de la estructura de las pantallas y prototipo navegable.</p>
-            <span class="secondary-content estado completado">Completado</span>
-          </li>
-          <li class="collection-item avatar" data-estado="proceso">
-            <i class="material-icons circle bg-rojo">autorenew</i>
-            <span class="title">Sitio web informativo</span>
-            <p>Construcción de las páginas con HTML, CSS y Materialize.</p>
-            <span class="secondary-content estado proceso">En proceso</span>
-          </li>
-          <li class="collection-item avatar" data-estado="proceso">
-            <i class="material-icons circle bg-rojo">autorenew</i>
-            <span class="title">Modelo de datos y backend</span>
-            <p>Base de datos, lógica del servidor y manejo de citas y agendas.</p>
-            <span class="secondary-content estado proceso">En proceso</span>
-          </li>
-          <li class="collection-item avatar" data-estado="pendiente">
-            <i class="material-icons circle bg-celeste txt-marino">schedule</i>
-            <span class="title">Pruebas e integración</span>
-            <p>Pruebas de funcionamiento y verificación antes de publicar.</p>
-            <span class="secondary-content estado pendiente">Pendiente</span>
-          </li>
-        </ul>
-      </div>
+    <!-- Contenido principal -->
+    <main class="container">
 
-      <!-- Galería de avances (Grid System + Cards) -->
-      <div class="section">
-        <h5>Galería de avances</h5>
-        <div class="row">
+        <section class="section">
+            <h3 class="titulo-seccion">Desarrollo y avances</h3>
 
-          <div class="col s12 m6 l4">
-            <div class="card hoverable">
-              <div class="avance-imagen bg-azul">
-                <!-- Para usar una captura real: <img src="images/avances/wireframes.png" alt="Wireframes"> -->
-                <i class="material-icons">draw</i>
-              </div>
-              <div class="card-content">
-                <span class="card-title">Wireframes</span>
-                <p>Bocetos de las pantallas principales de la plataforma.</p>
-                <p class="detalle hide">Aquí va la descripción ampliada: qué se hizo, quién lo hizo y qué falta.</p>
-              </div>
-              <div class="card-action">
-                <button class="btn-flat btn-detalle">Ver más</button>
-              </div>
-            </div>
-          </div>
+            <p class="texto-secundario">
+                Seguimiento del progreso y desarrollo del proyecto Univalle Salud.
+                En esta sección se presentan las actividades realizadas y los
+                resultados obtenidos durante su construcción.
+            </p>
+        </section>
 
-          <div class="col s12 m6 l4">
-            <div class="card hoverable">
-              <div class="avance-imagen bg-rojo">
-                <i class="material-icons">web</i>
-              </div>
-              <div class="card-content">
-                <span class="card-title">Prototipo en Figma</span>
-                <p>Prototipo navegable del flujo de agendamiento.</p>
-                <p class="detalle hide">Aquí va la descripción ampliada del prototipo.</p>
-              </div>
-              <div class="card-action">
-                <button class="btn-flat btn-detalle">Ver más</button>
-              </div>
+        <!-- Progreso -->
+        <section class="section">
+            <h5>Progreso</h5>
+
+            <p class="texto-secundario">
+                A continuación, se muestran los avances alcanzados en las
+                diferentes etapas del proyecto.
+            </p>
+
+            <div class="progress">
+                <div class="determinate" style="width: 70%"></div>
             </div>
           </div>
 
@@ -154,73 +98,20 @@
                 <button class="btn-flat btn-detalle">Ver más</button>
               </div>
             </div>
-          </div>
+        </section>
 
-        </div>
-      </div>
+    </main>
 
-    </div>
-  </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <p class="grey-text text-lighten-4 texto-secundario">
+                Univalle Salud - Proyecto académico.
+            </p>
+        </div>
+    </footer>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m8">
-          <h6 class="white-text">Proyecto Integrador I</h6>
-          <p class="grey-text text-lighten-4">Ingeniería de Sistemas - Universidad del Valle, Sede Tuluá</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">© 2026 Nombre del grupo</div>
-    </div>
-  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!-- ================= MODAL PARA WIREFRAMES ================= -->
-  <div id="modal-wireframes" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Galería de Wireframes</h4>
-      <p>Bocetos y estructura de las pantallas principales de la plataforma.</p>
-      
-      <!-- Aquí colocas tus imágenes. 
-           Asegúrate de que las fotos estén en la carpeta: images/wireframes/ 
-           y que los nombres coincidan exactamente -->
-      <div class="row">
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaInicio.webp" alt="Wireframe pantallaInicio" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaConsulta.webp" alt="Wireframe pantallaConsulta" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaAdmi.webp" alt="Wireframe pantallaAdmi" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaAgenda.webp" alt="Wireframe pantallaAgenda" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaGestion.webp" alt="Wireframe pantallaGestion" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaCelu1.webp" alt="Wireframe pantallaCelu1" class="responsive-img materialboxed">
-        </div>
-        <div class="col s12 m6">
-          <img src="images/wireframes/pantallaCeli2.webp" alt="Wireframe pantallaCelu2" class="responsive-img materialboxed">
-        </div>
-      </div>
-      <!-- Nota: La clase "materialboxed" hace que al hacer clic en la foto, esta se amplíe -->
-
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
-    </div>
-  </div>
-  <!-- ================= FIN DEL MODAL ================= -->
-
-  <!-- Materialize JS (CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <script src="js/avances.js"></script>
 </body>
 </html>

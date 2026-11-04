@@ -20,9 +20,9 @@
   <!-- ================= NAVBAR (igual en todas las páginas) ================= -->
   <nav>
     <div class="nav-wrapper container">
-      <a href="index.html" class="brand-logo">Mi Proyecto</a>
-      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+      <a href="index.html" class="brand-logo"><img src="images/logo-univalle-salud.png" alt="Univalle Salud"></a>
+      <span class="nav-slogan">Univalle Salud: bienestar que te acompaña.</span>
+      <ul class="nav-links">
         <!-- Ponle class="active" SOLO al <li> de la página en la que estás -->
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
@@ -32,14 +32,6 @@
       </ul>
     </div>
   </nav>
-
-  <ul class="sidenav" id="menu-movil">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="objetivos.html">Objetivos</a></li>
-    <li><a href="avances.html">Avances</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
 
   <!-- ================= CONTENIDO (cada quien edita solo esto) ================= -->
   <main>
@@ -71,7 +63,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      M.Sidenav.init(document.querySelectorAll('.sidenav'));
       // Aquí inicializan lo que necesiten (collapsibles, modales, etc.)
     });
   </script>

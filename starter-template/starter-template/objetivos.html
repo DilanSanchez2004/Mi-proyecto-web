@@ -19,9 +19,9 @@
   <!-- ================= NAVBAR ================= -->
   <nav>
     <div class="nav-wrapper container">
-      <a href="index.html" class="brand-logo">Mi Proyecto</a>
-      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+      <a href="index.html" class="brand-logo"><img src="images/logo-univalle-salud.png" alt="Univalle Salud"></a>
+      <span class="nav-slogan">Univalle Salud: bienestar que te acompaña.</span>
+      <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li class="active"><a href="objetivos.html">Objetivos</a></li>
@@ -30,15 +30,6 @@
       </ul>
     </div>
   </nav>
-
-  <!-- Menú para celular -->
-  <ul class="sidenav" id="menu-movil">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="objetivos.html">Objetivos</a></li>
-    <li><a href="avances.html">Avances</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
 
   <!-- ================= CONTENIDO ================= -->
   <main>
@@ -51,7 +42,8 @@
         <div class="card-stacked">
           <div class="card-content">
             <span class="card-title">Objetivo general</span>
-            <p>
+            <p class="texto-secundario"
+            >
               Desarrollar una aplicación web para la gestión y el agendamiento de citas de los
               servicios de salud de la Universidad del Valle, sedes Tuluá y Cali, que facilite el
               acceso de estudiantes y trabajadores a los servicios médicos, odontológicos y
@@ -64,36 +56,42 @@
 
       <!-- Objetivos específicos (collapsibles) -->
       <h5 style="margin-top: 40px;">Objetivos específicos</h5>
+      
 
       <ul class="collapsible">
         <li class="active">
           <div class="collapsible-header"><i class="material-icons">lock</i>1. Registro y autenticación</div>
           <div class="collapsible-body">
-            <span>Diseñar un sistema de registro y autenticación que permita diferenciar los tipos de usuarios: estudiantes, trabajadores, profesionales de salud y administradores.</span>
+            <p class="texto-secundario"
+            >Diseñar un sistema de registro y autenticación que permita diferenciar los tipos de usuarios: estudiantes, trabajadores, profesionales de salud y administradores.</span>
           </div>
         </li>
         <li>
           <div class="collapsible-header"><i class="material-icons">medical_services</i>2. Consulta de servicios por sede</div>
           <div class="collapsible-body">
-            <span>Implementar un módulo para consultar los servicios de salud disponibles (medicina general, odontología y psicología) en cada sede, Tuluá y Cali.</span>
+            <p class="texto-secundario"
+            >Implementar un módulo para consultar los servicios de salud disponibles (medicina general, odontología y psicología) en cada sede, Tuluá y Cali.</span>
           </div>
         </li>
         <li>
           <div class="collapsible-header"><i class="material-icons">event_available</i>3. Agendamiento de citas</div>
           <div class="collapsible-body">
-            <span>Desarrollar un sistema de agendamiento que permita seleccionar profesionales, fechas y horarios disponibles, evitando que dos personas reserven el mismo horario con el mismo profesional.</span>
+            <p class="texto-secundario"
+            >Desarrollar un sistema de agendamiento que permita seleccionar profesionales, fechas y horarios disponibles, evitando que dos personas reserven el mismo horario con el mismo profesional.</span>
           </div>
         </li>
         <li>
           <div class="collapsible-header"><i class="material-icons">admin_panel_settings</i>4. Gestión para profesionales y administradores</div>
           <div class="collapsible-body">
-            <span>Crear funcionalidades para que los profesionales gestionen sus agendas, e implementar herramientas administrativas para controlar usuarios, servicios, sedes y citas.</span>
+            <p class="texto-secundario"
+            >Crear funcionalidades para que los profesionales gestionen sus agendas, e implementar herramientas administrativas para controlar usuarios, servicios, sedes y citas.</span>
           </div>
         </li>
         <li>
           <div class="collapsible-header"><i class="material-icons">devices</i>5. Interfaz intuitiva y accesible</div>
           <div class="collapsible-body">
-            <span>Diseñar una interfaz intuitiva, organizada y adaptable a dispositivos móviles, accesible para los diferentes tipos de usuarios.</span>
+            <p class="texto-secundario"
+            >Diseñar una interfaz intuitiva, organizada y adaptable a dispositivos móviles, accesible para los diferentes tipos de usuarios.</span>
           </div>
         </li>
       </ul>
@@ -128,8 +126,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Activar menú de celular y collapsibles
-      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      // Activar collapsibles
       M.Collapsible.init(document.querySelectorAll('.collapsible'));
 
       // Interacción: al hacer clic se resalta la card del objetivo general
