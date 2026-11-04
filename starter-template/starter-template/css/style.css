@@ -361,8 +361,49 @@ footer.page-footer .footer-copyright {
   margin-bottom: 12px;
 }
 
+/* ---------- 12. Página Contacto ---------- */
+.contact-section {
+  max-width: 900px;
+}
 
-/* ---------- 12. Página Avances ---------- */
+.contact-info-card,
+.contact-form-card {
+  border-radius: 12px;
+}
+
+.contact-info-card .card-content,
+.contact-form-card .card-content {
+  padding: 28px 32px;
+}
+
+.contact-info-card p {
+  line-height: 1.8;
+  margin: 0;
+}
+
+.form-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+
+#contact-form [aria-invalid="true"] {
+  border-bottom: 1px solid var(--rojo);
+  box-shadow: 0 1px 0 0 var(--rojo);
+}
+
+#form-status {
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-info-card .card-content,
+  .contact-form-card .card-content {
+    padding: 22px;
+  }
+}
+
+/* ---------- 13. Página Avances ---------- */
 .filtros {
   margin: 15px 0;
 }
