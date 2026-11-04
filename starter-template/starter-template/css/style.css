@@ -45,14 +45,41 @@ nav {
 }
 
 nav .brand-logo {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
   font-weight: 600;
-  font-size: 1.4rem;
-  margin-left: 15px;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+  width: 56px;
+  border-radius: 50%;
+}
+
+nav .brand-logo img {
+  height: auto;
+  left: -32px;
+  max-width: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
 }
 
 nav ul a {
   font-weight: 400;
   transition: background-color 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  nav .brand-logo {
+    width: 50px;
+  }
+
+  nav .brand-logo img {
+    left: -29px;
+    width: 107px;
+  }
 }
 
 nav ul a:hover {
@@ -469,19 +496,42 @@ footer.page-footer .footer-copyright {
 /* ---------- 14. Navegación horizontal ---------- */
 nav .nav-wrapper {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  max-width: none;
+  padding: 0 24px;
+  width: 100%;
 }
 
-nav .brand-logo {
-  position: static;
-  transform: none;
+nav .nav-wrapper > .brand-logo {
+  flex: 0 0 56px;
+  left: auto !important;
+  margin: 0;
+  position: relative !important;
+  right: auto !important;
+  transform: none !important;
+}
+
+nav .nav-wrapper > ul.right {
+  display: flex;
+  float: none;
+  flex: 1;
+  justify-content: flex-end;
+  margin: 0 0 0 auto;
+  position: static !important;
+  transform: none !important;
 }
 
 nav .nav-links {
   display: flex;
   flex: 1;
+  float: none;
   margin: 0 0 0 auto;
   justify-content: flex-end;
+  position: static !important;
+  transform: none !important;
 }
 
 nav .nav-links li {
@@ -493,9 +543,30 @@ nav .nav-links li a {
 }
 
 @media only screen and (max-width: 700px) {
-  nav .brand-logo {
-    font-size: 1.15rem;
-    margin-left: 8px;
+  nav .nav-wrapper {
+    padding: 0 12px;
+  }
+
+  nav .nav-wrapper > .brand-logo {
+    flex-basis: 50px;
+    height: 50px;
+    left: auto !important;
+    margin-left: 0;
+    right: auto !important;
+    width: 50px;
+  }
+
+  nav .nav-wrapper > ul.right {
+    display: none;
+  }
+
+  nav .sidenav-trigger {
+    margin-left: auto;
+  }
+
+  nav .brand-logo img {
+    left: -29px;
+    width: 107px;
   }
 
   nav .nav-links li a {
