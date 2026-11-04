@@ -77,21 +77,41 @@
       // PARTE 3: BOTÓN "VER MÁS / VER MENOS" EN LAS TARJETAS
       // =====================================================
 
-      // Buscamos todos los botones "Ver más".
+       // 1. Inicializamos los modales de Materialize (¡Esto es obligatorio para que abra la ventana!)
+      var elemsModal = document.querySelectorAll('.modal');
+      var instanciasModal = M.Modal.init(elemsModal);
+
+      // 2. Inicializamos el efecto de zoom para las imágenes dentro del modal
+      var elemsImg = document.querySelectorAll('.materialboxed');
+      var instanciasImg = M.Materialbox.init(elemsImg);
+
+      // 3. Buscamos todos los botones "Ver más" y les asignamos la acción
       document.querySelectorAll('.btn-detalle').forEach(function (boton) {
-        boton.addEventListener('click', function () {
+        boton.addEventListener('click', function (e) {
+          
+          // Evitamos que el botón recargue la página
+          e.preventDefault();
 
-          // Desde el botón subimos a su tarjeta (.card) y buscamos
-          // dentro de ella el párrafo con la descripción ampliada.
-          var detalle = boton.closest('.card').querySelector('.detalle');
+          // Buscamos la tarjeta a la que pertenece el botón
+          var tarjeta = boton.closest('.card');
+          
+          // Leemos el título de la tarjeta (ej: "Wireframes", "Prototipo en Figma")
+          var titulo = tarjeta.querySelector('.card-title').textContent.trim();
 
-          // toggle: si tiene la clase "hide" se la quita (se ve),
-          // y si no la tiene se la pone (se oculta).
-          detalle.classList.toggle('hide');
-
-          // Cambiamos el texto del botón según el estado.
-          boton.textContent = detalle.classList.contains('hide') ? 'Ver más' : 'Ver menos';
+          // CONDICIÓN: Si el título es "Wireframes", abrimos la ventana con las fotos
+          if (titulo === 'Wireframes') {
+            var modalWireframe = document.getElementById('modal-wireframes');
+            var instancia = M.Modal.getInstance(modalWireframe);
+            instancia.open();
+          } 
+          // SI ES OTRA TARJETA: Hacemos lo que ya tenías (mostrar/ocultar texto)
+          else {
+            var detalle = tarjeta.querySelector('.detalle');
+            detalle.classList.toggle('hide');
+            boton.textContent = detalle.classList.contains('hide') ? 'Ver más' : 'Ver menos';
+          }
+          
         });
       });
 
-    });
+    }); // 
