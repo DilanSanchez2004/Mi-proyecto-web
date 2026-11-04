@@ -1,184 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avances | Mi Proyecto Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce el desarrollo y los avances de Univalle Salud.">
+    <title>Avances | Univalle Salud</title>
 
-  <!-- Iconos de Google -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- Materialize CSS (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <!-- Estilos propios (siempre después de Materialize) -->
-  <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav>
-    <div class="nav-wrapper container">
-      <a href="index.html" class="brand-logo">Mi Proyecto</a>
-      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="objetivos.html">Objetivos</a></li>
-        <li class="active"><a href="avances.html">Avances</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Univalle Salud</a>
 
-  <!-- Menú para celular -->
-  <ul class="sidenav" id="menu-movil">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="objetivos.html">Objetivos</a></li>
-    <li class="active"><a href="avances.html">Avances</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-
-  <!-- ================= CONTENIDO ================= -->
-  <main>
-    <div class="container">
-
-      <h3 class="titulo-seccion">Desarrollo y avances</h3>
-      <p>Seguimiento del progreso de la plataforma de agendamiento de citas de salud de la Universidad del Valle.</p>
-
-      <!-- Progreso general (se calcula solo con JS) -->
-      <div class="section">
-        <h5>Progreso general: <span id="porcentaje">0</span>%</h5>
-        <div class="progress">
-          <div class="determinate" id="barra-progreso" style="width: 0%"></div>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="avances.html">Avances</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
         </div>
-      </div>
+    </nav>
 
-      <!-- Línea de avances (Materialize Collection) -->
-      <div class="section">
-        <h5>Línea de avances</h5>
+    <!-- Contenido principal -->
+    <main class="container">
 
-        <!-- Filtros con chips -->
-        <div class="filtros">
-          <a href="#!" class="chip filtro activo" data-filtro="todos">Todos</a>
-          <a href="#!" class="chip filtro" data-filtro="completado">Completados</a>
-          <a href="#!" class="chip filtro" data-filtro="proceso">En proceso</a>
-          <a href="#!" class="chip filtro" data-filtro="pendiente">Pendientes</a>
-        </div>
+        <section class="section">
+            <h3 class="titulo-seccion">Desarrollo y avances</h3>
 
-        <ul class="collection">
-          <li class="collection-item avatar" data-estado="completado">
-            <i class="material-icons circle bg-azul">check</i>
-            <span class="title">Requisitos e historias de usuario</span>
-            <p>Levantamiento de requisitos y redacción de las historias de usuario.</p>
-            <span class="secondary-content estado completado">Completado</span>
-          </li>
-          <li class="collection-item avatar" data-estado="completado">
-            <i class="material-icons circle bg-azul">check</i>
-            <span class="title">Wireframes y prototipo en Figma</span>
-            <p>Diseño de la estructura de las pantallas y prototipo navegable.</p>
-            <span class="secondary-content estado completado">Completado</span>
-          </li>
-          <li class="collection-item avatar" data-estado="proceso">
-            <i class="material-icons circle bg-rojo">autorenew</i>
-            <span class="title">Sitio web informativo</span>
-            <p>Construcción de las páginas con HTML, CSS y Materialize.</p>
-            <span class="secondary-content estado proceso">En proceso</span>
-          </li>
-          <li class="collection-item avatar" data-estado="proceso">
-            <i class="material-icons circle bg-rojo">autorenew</i>
-            <span class="title">Modelo de datos y backend</span>
-            <p>Base de datos, lógica del servidor y manejo de citas y agendas.</p>
-            <span class="secondary-content estado proceso">En proceso</span>
-          </li>
-          <li class="collection-item avatar" data-estado="pendiente">
-            <i class="material-icons circle bg-celeste txt-marino">schedule</i>
-            <span class="title">Pruebas e integración</span>
-            <p>Pruebas de funcionamiento y verificación antes de publicar.</p>
-            <span class="secondary-content estado pendiente">Pendiente</span>
-          </li>
-        </ul>
-      </div>
+            <p class="texto-secundario">
+                Seguimiento del progreso y desarrollo del proyecto Univalle Salud.
+                En esta sección se presentan las actividades realizadas y los
+                resultados obtenidos durante su construcción.
+            </p>
+        </section>
 
-      <!-- Galería de avances (Grid System + Cards) -->
-      <div class="section">
-        <h5>Galería de avances</h5>
-        <div class="row">
+        <!-- Progreso -->
+        <section class="section">
+            <h5>Progreso</h5>
 
-          <div class="col s12 m6 l4">
-            <div class="card hoverable">
-              <div class="avance-imagen bg-azul">
-                <!-- Para usar una captura real: <img src="images/avances/wireframes.png" alt="Wireframes"> -->
-                <i class="material-icons">draw</i>
-              </div>
-              <div class="card-content">
-                <span class="card-title">Wireframes</span>
-                <p>Bocetos de las pantallas principales de la plataforma.</p>
-                <p class="detalle hide">Aquí va la descripción ampliada: qué se hizo, quién lo hizo y qué falta.</p>
-              </div>
-              <div class="card-action">
-                <button class="btn-flat btn-detalle">Ver más</button>
-              </div>
+            <p class="texto-secundario">
+                A continuación, se muestran los avances alcanzados en las
+                diferentes etapas del proyecto.
+            </p>
+
+            <div class="progress">
+                <div class="determinate" style="width: 70%"></div>
             </div>
-          </div>
+        </section>
 
-          <div class="col s12 m6 l4">
-            <div class="card hoverable">
-              <div class="avance-imagen bg-rojo">
-                <i class="material-icons">web</i>
-              </div>
-              <div class="card-content">
-                <span class="card-title">Prototipo en Figma</span>
-                <p>Prototipo navegable del flujo de agendamiento.</p>
-                <p class="detalle hide">Aquí va la descripción ampliada del prototipo.</p>
-              </div>
-              <div class="card-action">
-                <button class="btn-flat btn-detalle">Ver más</button>
-              </div>
+        <!-- Línea de avances -->
+        <section class="section">
+            <h5>Línea de avances</h5>
+
+            <ul class="collection">
+                <li class="collection-item">
+                    <h6>Planeación del proyecto</h6>
+                    <p class="texto-secundario">
+                        Se definieron los objetivos, requerimientos y estructura
+                        general del proyecto.
+                    </p>
+                </li>
+
+                <li class="collection-item">
+                    <h6>Diseño de la interfaz</h6>
+                    <p class="texto-secundario">
+                        Se estableció la organización visual de las páginas y
+                        los elementos principales de navegación.
+                    </p>
+                </li>
+
+                <li class="collection-item">
+                    <h6>Desarrollo de las páginas</h6>
+                    <p class="texto-secundario">
+                        Se trabajó en la construcción de las diferentes secciones
+                        del sitio web utilizando HTML, CSS y Materialize.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Galería de avances -->
+        <section class="section">
+            <h5>Galería de avances</h5>
+
+            <div class="row">
+
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Diseño inicial</span>
+
+                            <p class="texto-secundario">
+                                Primera etapa de organización y diseño de la
+                                interfaz del proyecto.
+                            </p>
+
+                            <p class="detalle hide texto-secundario">
+                                Se definieron los componentes visuales y la
+                                estructura de navegación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Desarrollo web</span>
+
+                            <p class="texto-secundario">
+                                Construcción de las páginas y adaptación de
+                                sus elementos visuales.
+                            </p>
+
+                            <p class="detalle hide texto-secundario">
+                                Se integraron estilos, componentes y contenido
+                                para mejorar la experiencia de navegación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
+        </section>
 
-          <div class="col s12 m6 l4">
-            <div class="card hoverable">
-              <div class="avance-imagen bg-marino">
-                <i class="material-icons">code</i>
-              </div>
-              <div class="card-content">
-                <span class="card-title">Sitio web</span>
-                <p>Páginas del sitio con Materialize y estilos propios.</p>
-                <p class="detalle hide">Aquí va la descripción ampliada del sitio web.</p>
-              </div>
-              <div class="card-action">
-                <button class="btn-flat btn-detalle">Ver más</button>
-              </div>
-            </div>
-          </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <p class="grey-text text-lighten-4 texto-secundario">
+                Univalle Salud - Proyecto académico.
+            </p>
         </div>
-      </div>
+    </footer>
 
-    </div>
-  </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m8">
-          <h6 class="white-text">Proyecto Integrador I</h6>
-          <p class="grey-text text-lighten-4">Ingeniería de Sistemas - Universidad del Valle, Sede Tuluá</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">© 2026 Nombre del grupo</div>
-    </div>
-  </footer>
-
-  <!-- Materialize JS (CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <script src="js/avances.js"></script>
 </body>
 </html>
