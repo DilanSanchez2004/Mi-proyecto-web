@@ -20,8 +20,8 @@
   <nav>
     <div class="nav-wrapper container">
       <a href="index.html" class="brand-logo"><img src="images/logo-univalle-salud.png" alt="Univalle Salud"></a>
-      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+      <span class="nav-slogan">Univalle Salud: bienestar que te acompaña.</span>
+      <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li class="active"><a href="objetivos.html">Objetivos</a></li>
@@ -30,15 +30,6 @@
       </ul>
     </div>
   </nav>
-
-  <!-- Menú para celular -->
-  <ul class="sidenav" id="menu-movil">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="objetivos.html">Objetivos</a></li>
-    <li><a href="avances.html">Avances</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
 
   <!-- ================= CONTENIDO ================= -->
   <main>
@@ -128,8 +119,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Activar menú de celular y collapsibles
-      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      // Activar collapsibles
       M.Collapsible.init(document.querySelectorAll('.collapsible'));
 
       // Interacción: al hacer clic se resalta la card del objetivo general
