@@ -1,44 +1,31 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+/* =========================================================
+   style.css - Estilo GLOBAL del sitio (Proyecto Integrador I)
+   Sobrescribe los colores por defecto de Materialize.
+   ========================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
   --rojo: #E63946;
+  --negro: #000000;
   --blanco: #F1FAEE;
   --celeste: #A8DADC;
   --azul: #457B9D;
   --marino: #1D3557;
 }
 
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-	font-size: inherit;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: var(--blanco);
+  color: var(--marino);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background: #f7f9fc;
-  color: var(--marino);
 }
 
 main {
   flex: 1 0 auto;
+  padding: 40px 0;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li, span, label, button, input, textarea {
@@ -52,6 +39,14 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: var(--azul);
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
 }
 
 nav {
@@ -103,122 +98,8 @@ nav ul li.active {
   background-color: var(--marino);
 }
 
-.about-banner {
-  padding: 55px 0 45px;
-  background: linear-gradient(135deg, #29b6f6, #1565c0);
-}
-
-.about-banner h1 {
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.section-title {
-  margin-bottom: 35px;
-  font-weight: 600;
-}
-
-.mission-card, .vision-card {
-  min-height: 0;
-  border-radius: 12px;
-}
-
-.mission-card .card-content, .vision-card .card-content {
-  padding: 28px 32px;
-}
-
-.purpose-card-content {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  align-items: center;
-  gap: 32px;
-}
-
-.purpose-heading {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.purpose-heading .card-title {
-  margin: 0;
-  font-weight: 600;
-}
-
-.purpose-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: #fff;
-}
-
-.mission-icon {
-  background: #29b6f6;
-}
-
-.vision-icon {
-  background: #5c6bc0;
-}
-
-.mission-card p, .vision-card p {
-  margin: 0;
-  line-height: 1.8;
-}
-
-@media only screen and (max-width: 992px) {
-  .purpose-card-content {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-}
-
-.team-card {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.team-card .card-content {
-  min-height: 230px;
-}
-
-.team-name {
-  font-size: 1.15rem !important;
-  line-height: 1.35 !important;
-}
-
-.team-avatar {
-  width: 110px;
-  height: 110px;
-  margin: 28px auto 0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .18);
-}
-
-.team-card .card-title {
-  font-weight: 600;
-}
-
-.team-role {
-  color: #777;
-  text-transform: uppercase;
-  font-size: .85rem;
-  letter-spacing: 1px;
-}
-
-@media only screen and (max-width: 600px) {
-  .about-banner {
-    padding: 40px 0;
-  }
+.btn-flat {
+  color: var(--azul);
 }
 
 .card {
@@ -237,6 +118,10 @@ nav ul li.active {
 
 .card .card-action a:not(.btn):hover {
   color: var(--rojo);
+}
+
+.card.horizontal .card-stacked {
+  border-left: 5px solid var(--rojo);
 }
 
 .collapsible {
@@ -274,6 +159,72 @@ nav ul li.active {
   color: var(--azul) !important;
 }
 
+.input-field .prefix.active {
+  color: var(--azul);
+}
+
+input.invalid,
+textarea.invalid {
+  border-bottom: 1px solid var(--rojo) !important;
+  box-shadow: 0 1px 0 0 var(--rojo) !important;
+}
+
+.helper-text[data-error] {
+  color: var(--rojo);
+}
+
+.collection .collection-item.active {
+  background-color: var(--azul);
+}
+
+.collection a.collection-item {
+  color: var(--azul);
+}
+
+.collection a.collection-item:hover:not(.active) {
+  background-color: var(--celeste);
+}
+
+.chip {
+  background-color: var(--celeste);
+  color: var(--marino);
+}
+
+.tabs .tab a {
+  color: var(--azul);
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  color: var(--rojo);
+}
+
+.tabs .indicator {
+  background-color: var(--rojo);
+}
+
+.modal .modal-footer .btn-flat {
+  color: var(--azul);
+}
+
+.progress {
+  background-color: var(--celeste);
+}
+
+.progress .determinate,
+.progress .indeterminate {
+  background-color: var(--rojo);
+}
+
+.badge.new {
+  background-color: var(--rojo);
+}
+
+[type="checkbox"].filled-in:checked + span:not(.lever)::after {
+  border-color: var(--azul);
+  background-color: var(--azul);
+}
+
 .titulo-seccion {
   border-bottom: 4px solid var(--rojo);
   display: inline-block;
@@ -294,11 +245,16 @@ nav ul li.active {
   color: var(--blanco);
 }
 
+.bloque-general .card-stacked {
+  border-left-color: var(--celeste);
+}
+
 .bg-rojo { background-color: var(--rojo) !important; }
 .bg-blanco { background-color: var(--blanco) !important; }
 .bg-celeste { background-color: var(--celeste) !important; }
 .bg-azul { background-color: var(--azul) !important; }
 .bg-marino { background-color: var(--marino) !important; }
+
 .txt-rojo { color: var(--rojo) !important; }
 .txt-celeste { color: var(--celeste) !important; }
 .txt-azul { color: var(--azul) !important; }
@@ -310,4 +266,128 @@ footer.page-footer {
 
 footer.page-footer .footer-copyright {
   background-color: var(--azul);
+}
+
+/* Estilos de la pagina Nosotros */
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.about-banner {
+  padding: 55px 0 45px;
+  background: linear-gradient(135deg, var(--azul), var(--marino));
+}
+
+.about-banner h1 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.section-title {
+  margin-bottom: 35px;
+  font-weight: 600;
+}
+
+.mission-card,
+.vision-card {
+  min-height: 0;
+  border-radius: 12px;
+}
+
+.mission-card .card-content,
+.vision-card .card-content {
+  padding: 28px 32px;
+}
+
+.purpose-card-content {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.purpose-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.purpose-heading .card-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.purpose-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--blanco);
+}
+
+.mission-icon {
+  background: var(--azul);
+}
+
+.vision-icon {
+  background: var(--marino);
+}
+
+.mission-card p,
+.vision-card p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.team-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.team-card .card-content {
+  min-height: 230px;
+}
+
+.team-name {
+  font-size: 1.15rem !important;
+  line-height: 1.35 !important;
+}
+
+.team-avatar {
+  width: 110px;
+  height: 110px;
+  margin: 28px auto 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  font-size: 2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .18);
+}
+
+.team-role {
+  color: #777;
+  text-transform: uppercase;
+  font-size: .85rem;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 992px) {
+  .purpose-card-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-banner {
+    padding: 40px 0;
+  }
 }
