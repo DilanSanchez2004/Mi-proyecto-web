@@ -7,25 +7,32 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="light-blue darken-2" role="navigation">
+  <!-- ================= NAVBAR ================= -->
+  <nav role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="index.html" class="brand-logo">Mi Proyecto</a>
+      <a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo-univalle-salud.png" alt="Univalle Salud"></a>
+      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html">Inicio</a></li>
         <li class="active"><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+
+  <ul class="sidenav" id="menu-movil">
+    <li><a href="index.html">Inicio</a></li>
+    <li class="active"><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="objetivos.html">Objetivos</a></li>
+    <li><a href="avances.html">Avances</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
 
   <main>
     <header class="about-banner white-text">
@@ -68,7 +75,10 @@
       <div class="row">
         <div class="col s12 m6 l3">
           <div class="card team-card hoverable center-align">
-            <div class="team-avatar light-blue darken-1">SV</div>
+            <div class="team-avatar light-blue darken-1">
+              <span>SV</span>
+              <img src="images/fotos-perfil/scarllys.webp" alt="Foto de Scarllys del Valle Vallecilla Caicedo" onerror="this.style.display='none'">
+            </div>
             <div class="card-content">
               <span class="card-title team-name">Scarllys del Valle Vallecilla Caicedo</span>
               <p class="team-role">Diseño UX/UI</p>
@@ -78,7 +88,10 @@
         </div>
         <div class="col s12 m6 l3">
           <div class="card team-card hoverable center-align">
-            <div class="team-avatar indigo lighten-1">DS</div>
+            <div class="team-avatar indigo lighten-1">
+              <span>DS</span>
+              <img src="images/fotos-perfil/dilan.webp" alt="Foto de Dilan Joseph Sanchez Silva" onerror="this.style.display='none'">
+            </div>
             <div class="card-content">
               <span class="card-title team-name">Dilan Joseph Sanchez Silva</span>
               <p class="team-role">Backend y base de datos</p>
@@ -88,7 +101,10 @@
         </div>
         <div class="col s12 m6 l3">
           <div class="card team-card hoverable center-align">
-            <div class="team-avatar teal lighten-1">DR</div>
+            <div class="team-avatar teal lighten-1">
+              <span>DR</span>
+              <img src="images/fotos-perfil/dennis.webp" alt="Foto de Dennis Maryuri Rosero Garcia" onerror="this.style.display='none'">
+            </div>
             <div class="card-content">
               <span class="card-title team-name">Dennis Maryuri Rosero Garcia</span>
               <p class="team-role">Desarrollo frontend</p>
@@ -98,7 +114,10 @@
         </div>
         <div class="col s12 m6 l3">
           <div class="card team-card hoverable center-align">
-            <div class="team-avatar orange darken-1">JN</div>
+            <div class="team-avatar orange darken-1">
+              <span>JN</span>
+              <img src="images/fotos-perfil/juan-sebastian.jpg" alt="Foto de Juan Sebastian Navarrete Rada" onerror="this.style.display='none'">
+            </div>
             <div class="card-content">
               <span class="card-title team-name">Juan Sebastian Navarrete Rada</span>
               <p class="team-role">Documentación y pruebas</p>
@@ -108,7 +127,10 @@
         </div>
         <div class="col s12 m6 l3">
           <div class="card team-card hoverable center-align">
-            <div class="team-avatar purple lighten-1">VB</div>
+            <div class="team-avatar purple lighten-1">
+              <span>VB</span>
+              <img src="images/fotos-perfil/valentina.webp" alt="Foto de Valentina Betancourt Caicedo" onerror="this.style.display='none'">
+            </div>
             <div class="card-content">
               <span class="card-title team-name">Valentina Betancourt Caicedo</span>
               <p class="team-role">Gestión de proyecto y requisitos</p>
@@ -118,7 +140,10 @@
         </div>
         <div class="col s12 m6 l3">
           <div class="card team-card hoverable center-align">
-            <div class="team-avatar pink lighten-1">JG</div>
+            <div class="team-avatar pink lighten-1">
+              <span>JG</span>
+              <img src="images/fotos-perfil/juan-jose.webp" alt="Foto de Juan Jose Trujillo Gonzales" onerror="this.style.display='none'">
+            </div>
             <div class="card-content">
               <span class="card-title team-name">Juan Jose Trujillo Gonzales</span>
               <p class="team-role">Calidad, integración y despliegue</p>
@@ -130,24 +155,27 @@
     </section>
   </main>
 
-  <footer class="page-footer light-blue darken-2">
-    <div class="container center">
-      <h5 class="white-text">Mi Proyecto</h5>
-      <p class="grey-text text-lighten-4">Equipo de trabajo comprometido con el aprendizaje y la innovación.</p>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8">
+          <h6 class="white-text">Proyecto Integrador I</h6>
+          <p class="grey-text text-lighten-4">Ingeniería de Sistemas - Universidad del Valle, Sede Tuluá</p>
+        </div>
+      </div>
     </div>
     <div class="footer-copyright">
-      <div class="container center">
-        © 2026 Nuestro Proyecto
-      </div>
+      <div class="container">© 2026 Nombre del grupo</div>
     </div>
   </footer>
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    });
+  </script>
   </body>
 </html>

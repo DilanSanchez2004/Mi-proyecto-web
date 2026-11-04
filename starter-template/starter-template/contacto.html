@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ponte en contacto con nuestro equipo. Envíanos tus preguntas o solicitudes de información.">
+  <title>Contacto | Mi Proyecto Web</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo-univalle-salud.png" alt="Univalle Salud"></a>
+      <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li class="active"><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="menu-movil">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="objetivos.html">Objetivos</a></li>
+    <li><a href="avances.html">Avances</a></li>
+    <li class="active"><a href="contacto.html">Contacto</a></li>
+  </ul>
+
+  <main>
+    <header class="about-banner white-text">
+      <div class="container center">
+        <h1>Contacto</h1>
+        <h5 class="light">Estamos aquí para resolver tus dudas y orientarte.</h5>
+      </div>
+    </header>
+
+    <section class="container section contact-section" id="contacto">
+      <h4 class="center section-title blue-grey-text text-darken-3">¿Tienes preguntas?</h4>
+      <div class="row">
+        <div class="col s12">
+          <div class="card contact-info-card hoverable">
+            <div class="card-content">
+              <p class="grey-text text-darken-2">Usa el formulario para contarnos el motivo de tu consulta y el equipo de Univalle Salud podrá orientarte.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12">
+          <div class="card contact-form-card hoverable">
+            <div class="card-content">
+              <h5 class="form-title blue-text text-darken-2">Envíanos un mensaje</h5>
+              <form id="contact-form" novalidate>
+                <div class="input-field">
+                  <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+                  <label for="nombre">Nombre completo</label>
+                </div>
+                <div class="input-field">
+                  <input id="correo" name="correo" type="email" autocomplete="email" required>
+                  <label for="correo">Correo electrónico</label>
+                </div>
+                <div class="input-field">
+                  <textarea id="mensaje" name="mensaje" class="materialize-textarea" required></textarea>
+                  <label for="mensaje">Escribe tu mensaje</label>
+                </div>
+                <button class="btn waves-effect waves-light light-blue darken-2" type="submit">
+                  Enviar mensaje
+                  <i class="material-icons right" aria-hidden="true">send</i>
+                </button>
+                <p id="form-status" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8">
+          <h6 class="white-text">Proyecto Integrador I</h6>
+          <p class="grey-text text-lighten-4">Ingeniería de Sistemas - Universidad del Valle, Sede Tuluá</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">© 2026 Nombre del grupo</div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+
+      const contactForm = document.getElementById('contact-form');
+      const formStatus = document.getElementById('form-status');
+      const nameField = document.getElementById('nombre');
+      const emailField = document.getElementById('correo');
+      const messageField = document.getElementById('mensaje');
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        formStatus.textContent = '';
+        [nameField, emailField, messageField].forEach(function (field) {
+          field.setAttribute('aria-invalid', 'false');
+        });
+
+        let firstInvalidField = null;
+        if (!nameField.value.trim()) {
+          nameField.setAttribute('aria-invalid', 'true');
+          formStatus.textContent = 'Escribe tu nombre.';
+          firstInvalidField = nameField;
+        } else if (!emailPattern.test(emailField.value.trim())) {
+          emailField.setAttribute('aria-invalid', 'true');
+          formStatus.textContent = 'Escribe un correo electrónico válido.';
+          firstInvalidField = emailField;
+        } else if (!messageField.value.trim()) {
+          messageField.setAttribute('aria-invalid', 'true');
+          formStatus.textContent = 'Escribe tu mensaje.';
+          firstInvalidField = messageField;
+        }
+
+        if (firstInvalidField) {
+          firstInvalidField.focus();
+          return;
+        }
+
+        formStatus.textContent =
+          'Datos validados correctamente. El formulario todavía no está conectado a un servicio de envío.';
+      });
+    });
+  </script>
+</body>
+</html>
