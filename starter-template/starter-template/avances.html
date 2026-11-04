@@ -13,16 +13,46 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo">Univalle Salud</a>
+  <nav>
+    <div class="nav-wrapper container">
 
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="avances.html">Avances</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+      <a href="index.html" class="brand-logo"><img src="images/logo-univalle-salud.png" alt="Univalle Salud"></a>
+      <span class="nav-slogan">Univalle Salud: bienestar que te acompaña.</span>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li class="active"><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= CONTENIDO ================= -->
+  <main>
+    <div class="container">
+
+      <h3 class="titulo-seccion">Desarrollo y avances</h3>
+      <p>Seguimiento del progreso de la plataforma de agendamiento de citas de salud de la Universidad del Valle.</p>
+
+      <!-- Progreso general (se calcula solo con JS) -->
+      <div class="section">
+        <h5>Progreso general: <span id="porcentaje">0</span>%</h5>
+        <div class="progress">
+          <div class="determinate" id="barra-progreso" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Línea de avances (Materialize Collection) -->
+      <div class="section">
+        <h5>Línea de avances</h5>
+
+        <!-- Filtros con chips -->
+        <div class="filtros">
+          <a href="#!" class="chip filtro activo" data-filtro="todos">Todos</a>
+          <a href="#!" class="chip filtro" data-filtro="completado">Completados</a>
+          <a href="#!" class="chip filtro" data-filtro="proceso">En proceso</a>
+          <a href="#!" class="chip filtro" data-filtro="pendiente">Pendientes</a>
         </div>
     </nav>
 
