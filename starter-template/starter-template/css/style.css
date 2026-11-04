@@ -5,6 +5,16 @@
  *
  * Made By MaterializeCSS.com
  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --rojo: #E63946;
+  --blanco: #F1FAEE;
+  --celeste: #A8DADC;
+  --azul: #457B9D;
+  --marino: #1D3557;
+}
+
 .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-weight: 100;
@@ -19,14 +29,78 @@
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   background: #f7f9fc;
+  color: var(--marino);
 }
 
 main {
   flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, span, label, button, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--marino);
+}
+
+a {
+  color: var(--azul);
+}
+
+nav {
+  background-color: var(--marino);
+}
+
+nav .brand-logo {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-left: 15px;
+}
+
+nav ul a {
+  font-weight: 400;
+  transition: background-color 0.3s;
+}
+
+nav ul a:hover {
+  background-color: var(--azul);
+}
+
+nav ul li.active {
+  background-color: var(--rojo);
+}
+
+.sidenav li > a {
+  color: var(--marino);
+}
+
+.btn,
+.btn-large,
+.btn-small,
+.btn-floating {
+  background-color: var(--rojo);
+  font-family: 'Poppins', sans-serif;
+  text-transform: none;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+  border-radius: 25px;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover,
+.btn-floating:hover {
+  background-color: var(--marino);
 }
 
 .about-banner {
@@ -145,4 +219,95 @@ main {
   .about-banner {
     padding: 40px 0;
   }
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card .card-title {
+  font-weight: 600;
+  color: var(--marino);
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-floating) {
+  color: var(--azul);
+}
+
+.card .card-action a:not(.btn):hover {
+  color: var(--rojo);
+}
+
+.collapsible {
+  border: none;
+  box-shadow: none;
+}
+
+.collapsible-header {
+  background-color: var(--celeste);
+  color: var(--marino);
+  font-weight: 600;
+  border-bottom: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.collapsible-header i {
+  color: var(--rojo);
+}
+
+.collapsible-body {
+  background-color: #ffffff;
+  border-bottom: none;
+  border-left: 4px solid var(--azul);
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+  border-bottom: 1px solid var(--azul) !important;
+  box-shadow: 0 1px 0 0 var(--azul) !important;
+}
+
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+  color: var(--azul) !important;
+}
+
+.titulo-seccion {
+  border-bottom: 4px solid var(--rojo);
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+}
+
+.bloque-general {
+  background-color: var(--azul);
+  color: var(--blanco);
+  border-radius: 12px;
+  padding: 25px 30px;
+}
+
+.bloque-general h5,
+.bloque-general .card-title,
+.bloque-general p {
+  color: var(--blanco);
+}
+
+.bg-rojo { background-color: var(--rojo) !important; }
+.bg-blanco { background-color: var(--blanco) !important; }
+.bg-celeste { background-color: var(--celeste) !important; }
+.bg-azul { background-color: var(--azul) !important; }
+.bg-marino { background-color: var(--marino) !important; }
+.txt-rojo { color: var(--rojo) !important; }
+.txt-celeste { color: var(--celeste) !important; }
+.txt-azul { color: var(--azul) !important; }
+.txt-marino { color: var(--marino) !important; }
+
+footer.page-footer {
+  background-color: var(--marino);
+}
+
+footer.page-footer .footer-copyright {
+  background-color: var(--azul);
 }
