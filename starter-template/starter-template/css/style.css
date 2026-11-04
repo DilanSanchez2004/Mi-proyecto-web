@@ -368,3 +368,50 @@ footer.page-footer .footer-copyright {
   font-weight: 600;
   margin-bottom: 12px;
 }
+
+
+/* ---------- 12. Página Avances ---------- */
+.filtros {
+  margin: 15px 0;
+}
+
+.chip.filtro {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.chip.filtro:hover,
+.chip.filtro.activo {
+  background-color: var(--marino);
+  color: var(--blanco);
+}
+
+.estado {
+  border-radius: 12px;
+  color: var(--blanco);
+  font-size: 0.8rem;
+  padding: 4px 12px;
+}
+
+.estado.completado { background-color: var(--azul); }
+.estado.proceso    { background-color: var(--rojo); }
+.estado.pendiente  { background-color: var(--celeste); color: var(--marino); }
+
+.avance-imagen {
+  align-items: center;
+  color: var(--blanco);
+  display: flex;
+  height: 160px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avance-imagen i {
+  font-size: 4rem;
+}
+
+.avance-imagen img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
